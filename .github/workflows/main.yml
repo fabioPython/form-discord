@@ -1,0 +1,21 @@
+name: Deploy Contact Form Worker 
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/checkout@v3
+      
+      # --- STEP 10: Deploy Worker ---
+      # wrangler.toml is now fully substituted, deploy should work
+      - name: Deploy Worker
+        # Use npx wrangler
+        run: npx wrangler@4.14.1 deploy
+        env:
+          # Provide credentials for the deploy command itself
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
