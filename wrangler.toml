@@ -6,3 +6,4 @@ compatibility_date = "2024-02-19"
 
 [vars]
 DISCORD_WEBHOOK_URL="https://"
+YOUR_DOMAIN=""
