@@ -1,0 +1,10 @@
+# wrangler.toml
+name = "contact-form" # Reference from .env
+main = "worker.js"
+compatibility_date = "2024-02-19"
+
+
+[vars]
+#TELEGRAM_BOT_TOKEN="WRITE_TELEGRAM_TOKEN_AND_MARK_IT_AS_SECRET" 
+#TELEGRAM_CHAT_ID=""
+#YOUR_DOMAIN=""
