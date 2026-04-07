@@ -1,5 +1,5 @@
 export default {
-  async fetch(request, , env) {
+  async fetch(request, env) {
     let allowedOrigins = env.YOUR_DOMAIN.split(',');
     //const allowedOrigins = ["https://yourdomain.com", "https://another-allowed.com"];
     const origin = request.headers.get("Origin");
